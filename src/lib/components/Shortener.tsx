@@ -31,7 +31,7 @@ type Form = {
 
 const CreateLinkForm: NextPage = () => {
   const [form, setForm] = useState<Form>({ slug: "", url: "" });
-  const url = "https://sam.vercel.app";
+  const url = "https://samshortener.vercel.app";
   const nanoid = customAlphabet("abcdefghijklmnopqrstuvwxyz", 3);
 
   const slugCheck = trpc.useQuery(["slugCheck", { slug: form.slug }], {
